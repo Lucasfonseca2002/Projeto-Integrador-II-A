@@ -88,6 +88,45 @@ src/
 - Java 8 ou superior
 - JDBC Driver do seu banco de dados (MySQL, PostgreSQL, SQLite, etc.)
 
+### Como Baixar e Configurar o Driver JDBC do MySQL
+
+Para que a aplicação Java consiga se conectar ao banco de dados MySQL, é necessário adicionar o driver JDBC do MySQL ao seu projeto.
+
+ 1. Baixando o Driver
+        Acesse o site oficial do MySQL Connector/J:
+        https://dev.mysql.com/downloads/connector/j/
+        Clique em "Download" e selecione a versão mais recente (exemplo: mysql-connector-j-9.3.0.jar).
+        Baixe o arquivo .jar.
+    
+  2. Adicionando o Driver ao Projeto
+        Crie a pasta lib na raiz do seu projeto (caso ainda não exista).
+        Mova o arquivo mysql-connector-j-9.3.0.jar para dentro da pasta lib.
+    
+  3. Incluindo o Driver no Classpath
+        Durante a compilação e execução, adicione o driver ao classpath:
+
+Compilação:
+   
+    javac -cp "lib/mysql-connector-j-9.3.0.jar" -d bin src/com/agenda/**/*.java
+    Execução:
+
+    java -cp "bin;lib/mysql-connector-j-9.3.0.jar" com.agenda.Main
+    
+Observação:
+
+No Linux ou Mac, troque o ; por ::
+
+    java -cp "bin:lib/mysql-connector-j-9.3.0.jar" com.agenda.Main
+    
+  4. Configurando a Conexão
+        Edite a classe ConexaoDB.java com as informações do seu banco de dados:
+
+    String url = "jdbc:mysql://localhost:3306/seu_banco";
+    String usuario = "root";
+    String senha = "sua_senha";
+    
+Substitua seu_banco, root e sua_senha conforme sua configuração.
+
 ## Exemplo de Uso
 
 ```plaintext
