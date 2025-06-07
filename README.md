@@ -13,7 +13,6 @@ Este projeto consiste em uma aplicação de linha de comando para gerenciamento 
 - [Como Executar](#como-executar)
 - [Dependências](#dependências)
 - [Exemplo de Uso](#exemplo-de-uso)
-- [Autores](#autores)
 
 ---
 
